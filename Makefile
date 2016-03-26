@@ -11,5 +11,5 @@ list:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
 
 clean:
-	rm -rf *.o *.ko *.mod.c *.markers *.order *.symvers
+	rm -rf .*.cmd .tmp_versions *.o *.ko *.mod.c *.markers *.order *.symvers
 .PHONY:modules clean

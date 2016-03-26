@@ -21,10 +21,16 @@ ssize_t list_read(struct file *file, char __user * buffer, size_t count, loff_t 
 	int num = 0;
 
 	printk("call list_read\n");
+#if 0
 	list_for_each(pos, &gStudentList) {
 		pStu = list_entry(pos, struct student, list);	
 		printk("num:%d, name %s\n", num++, pStu->name);
 	}
+#else
+	list_for_each_entry(pStu, &gStudentList, list) {
+		printk("num:%d, name %s\n", num++, pStu->name);
+	}
+#endif
 	return 0;
 }
 
