@@ -32,3 +32,5 @@ list_empty(struct list_head *head);
 
 参考代码:https://github.com/generalharry/kernel_list_head/tree/master
 
+for kernel code study: struct list_head
+file path in kernel: kernel/include/linux/list.h
